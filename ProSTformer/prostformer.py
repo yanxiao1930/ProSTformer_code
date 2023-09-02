@@ -230,7 +230,7 @@ class ProSTformer(nn.Module):
 
 
     def forward(self, video,external,y=None):
-        b, f, _, h, w, *_, device, p1,p2 = *video.shape, video.device, self.patch_size[0],self.patch_size[1]
+        b, f, _, h, w, device, p1,p2 = *video.shape, video.device, self.patch_size[0],self.patch_size[1]
         video = rearrange(video, 'b pf c (h p1) (w p2) -> b (pf h w) c p1 p2', p1 = self.patch_size_1[0], p2=self.patch_size_1[1]) 
         video = rearrange(video, 'b pfs c (h p1) (w p2) -> b (pfs h w) (c p1 p2)', p1 =self.patch_size[0], p2=self.patch_size[1])
         tokens = self.to_patch_embedding(video)
