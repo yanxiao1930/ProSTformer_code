@@ -39,7 +39,7 @@ if __name__ == "__main__":
         args.output_dir = "./saved_models/3-layer/index_{}_{}".format(args.index,args.time)
     else:
         args.output_dir ="./saved_models/3-layer/{}".format(args.name)
-    # os.system("mkdir -p {}".format(args.output_dir))  # 创建目录
+    # os.system("mkdir -p {}".format(args.output_dir))  
     if args.pretrained_model_path != False:
         args.output_dir=args.output_dir+'_pretrained'
     os.makedirs(args.output_dir,exist_ok=True)
@@ -53,7 +53,7 @@ if __name__ == "__main__":
     handler = logging.FileHandler(os.path.join(args.output_dir, "train_log.txt"))
     handler.setLevel(logging.INFO)
     formatter = logging.Formatter(
-        '%(asctime)s - %(levelname)s - %(name)s -   %(message)s')  # 这里可以更改logging在储存到txt的结构
+        '%(asctime)s - %(levelname)s - %(name)s -   %(message)s')  
     handler.setFormatter(formatter)
     logger.addHandler(handler)
     logger.info("Argument %s", args)
