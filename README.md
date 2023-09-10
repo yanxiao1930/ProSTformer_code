@@ -6,10 +6,17 @@ download nycbike datasets to folder data_nycbike
 download nyctaxi datasets to folder data_nyctaxi from https://pan.baidu.com/s/1dW3UyYJKL-YLgw7a6ujuLw  password: 1234
 
 ## data_x_30, data_x_60, data_x_90
-shape: (batch, historical_frames, channel, height, width) 
+video format shape: (batch, historical_records, channel, height, width) # channel 0: outflow  channel 1: inflow
+
+graph format shape: (batch, historical_records, channel, nodes) # nodes= height*width
 
 ## data_y_30, data_y_60, data_y_90
-shape: (batch, channel, height, width) 
+shape: (batch, channel, height, width) channel 0: outflow  channel 1: inflow
+
+## edge matrix
+
+adj_max.npy shape: (nodes, nodes) 
+
 
 ## ext_features 
 shape: (batch, features); columns: [temperature, wind, weekend, one-hot weather condition, one-hot weekday], 
