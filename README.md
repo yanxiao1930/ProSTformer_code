@@ -11,7 +11,7 @@ video format shape: (batch, historical_records, channel, height, width) # channe
 graph format shape: (batch, historical_records, channel, nodes) # nodes= height*width
 
 ## data_y_30, data_y_60, data_y_90
-shape: (batch, channel, height, width) channel 0: outflow  channel 1: inflow
+shape: (batch, channel, height, width) 
 
 ## edge matrix
 
