@@ -10,6 +10,8 @@ video format shape: (batch, historical_records, channel, height, width) # channe
 
 graph format shape: (batch, historical_records, channel, nodes) # nodes= height*width
 
+the last four weeks are test dataset, i.e., test_dataset: data_x_30[-48\*4\*7:,], data_x_60[-24\*4\*7:,], data_x_90[-16\*4\*7:,], where 48/24/16 means one day (24h) is partitioned according to 30 min, 60 min, and 90 min.
+
 ## data_y_30, data_y_60, data_y_90
 shape: (batch, channel, height, width) 
 
