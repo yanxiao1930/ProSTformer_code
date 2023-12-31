@@ -36,9 +36,9 @@ if __name__ == "__main__":
 
     # path
     if args.name==False:
-        args.output_dir = "./saved_models/3-layer/index_{}_{}".format(args.index,args.time)
+        args.output_dir = "./saved_models/index_{}_{}".format(args.index,args.time)
     else:
-        args.output_dir ="./saved_models/3-layer/{}".format(args.name)
+        args.output_dir ="./saved_models/{}".format(args.name)
     # os.system("mkdir -p {}".format(args.output_dir))  
     if args.pretrained_model_path != False:
         args.output_dir=args.output_dir+'_pretrained'
